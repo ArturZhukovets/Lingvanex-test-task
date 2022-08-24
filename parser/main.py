@@ -14,10 +14,10 @@ def parse_words(path):
             if len(line) != 2:
                 continue
             if len(eng_words) == len(rus_words) == 1:
-                writer_one_value('eng_words.txt', 'rus_words.txt', eng_words, rus_words)
+                writer_one_value('English.txt', 'Russian.txt', eng_words, rus_words)
             else:
-                eng_writer('eng_words.txt', eng_words, rus_words)
-                rus_writer('rus_words.txt', eng_words, rus_words)
+                eng_writer('English.txt', eng_words, rus_words)
+                rus_writer('Russian.txt', eng_words, rus_words)
 
 
 def writer_one_value(path_eng, path_rus, eng_words:list, rus_words:list):
