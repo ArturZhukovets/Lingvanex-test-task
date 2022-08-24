@@ -1,5 +1,3 @@
-
-
 def parse_words(path):
     """
     Парсим построчно для того, чтобы не занимать место в оперативной памяти.
@@ -9,8 +7,9 @@ def parse_words(path):
     with open(path, 'r', encoding='utf-8') as file_obj:
         for line in file_obj:
             line = line.replace("\n", '').split("\t")
-            eng_words:list = line[0].strip().split(";")
-            rus_words:list = line[1].strip().split(';')
+            eng_words:list = line[0].split(";")
+            rus_words:list = line[1].split(';')
+            # check if there is a translation
             if len(line) != 2:
                 continue
             if len(eng_words) == len(rus_words) == 1:
